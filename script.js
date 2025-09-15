@@ -41,6 +41,7 @@ function updateDashboard(repoData) {
 
     const updatedDate = new Date(repoData.updated_at).toLocaleDateString();
     document.getElementById('updatedAt').textContent = updatedDate;
+    document.getElementById('license').textContent = repoData.license?.spdx_id || 'None';
 }
 
 function showError(message) {

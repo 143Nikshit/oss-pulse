@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OSS Pulse</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>OSS Pulse</h1>
-        <p>See the heartbeat of your open-source project</p>
+      <h1>OSS Pulse</h1>
+      <p>See the heartbeat of your open-source project</p>
     </header>
 
     <div class="container">
-        <div class="input-section">
-            <input type="text" id="repoInput" placeholder="owner/repo (e.g., facebook/react)">
-            <button onclick="fetchData()">Get Pulse</button>
-        </div>
+      <div class="input-section">
+        <input
+          type="text"
+          id="repoInput"
+          placeholder="owner/repo (e.g., facebook/react)"
+        />
+        <button onclick="fetchData()">Get Pulse</button>
+      </div>
 
-        <div id="errorMessage" class="hidden"></div>
+      <div id="errorMessage" class="hidden"></div>
 
-        <div id="dashboard" class="hidden">
-            <h2>Results for: <span id="repoName"></span></h2>
-            <div class="metrics">
-                <div class="metric-card">
-                    <h3>Stars</h3>
-                    <p id="stars">-</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Forks</h3>
-                    <p id="forks">-</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Open Issues</h3>
-                    <p id="openIssues">-</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Last Updated</h3>
-                    <p id="updatedAt">-</p>
-                </div>
-                <!-- You can add more cards later -->
-            </div>
+      <div id="dashboard" class="hidden">
+        <h2>Results for: <span id="repoName"></span></h2>
+        <div class="metrics">
+          <div class="metric-card">
+            <h3>Stars</h3>
+            <p id="stars">-</p>
+          </div>
+          <div class="metric-card">
+            <h3>Forks</h3>
+            <p id="forks">-</p>
+          </div>
+          <div class="metric-card">
+            <h3>Open Issues</h3>
+            <p id="openIssues">-</p>
+          </div>
+          <div class="metric-card">
+            <h3>Last Updated</h3>
+            <p id="updatedAt">-</p>
+          </div>
+          <!-- You can add more cards later -->
         </div>
+      </div>
     </div>
 
     <footer>
-        <p>An open-source project. Hosted on <a href="https://github.com/YOUR_USERNAME/oss-pulse" target="_blank">GitHub</a>.</p>
+      <p>
+        An open-source project. Hosted on
+        <a href="https://github.com/YOUR_USERNAME/oss-pulse" target="_blank"
+          >GitHub</a
+        >.
+      </p>
     </footer>
 
+    <div class="metric-card">
+      <h3>License</h3>
+      <p id="license">-</p>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
